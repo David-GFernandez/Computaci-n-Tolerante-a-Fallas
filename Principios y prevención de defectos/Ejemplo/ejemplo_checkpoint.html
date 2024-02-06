@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Demostración</title>
+<script>
+    // Función para guardar los datos en el almacenamiento local
+    function guardarDatos() {
+        localStorage.setItem('nombre', document.getElementById('nombre').value);
+        localStorage.setItem('edad', document.getElementById('edad').value);
+        localStorage.setItem('carrera', document.getElementById('carrera').value);
+        localStorage.setItem('semestre', document.getElementById('semestre').value);
+    }
+
+    // Función para cargar los datos guardados del almacenamiento local
+    function cargarDatos() {
+        document.getElementById('nombre').value = localStorage.getItem('nombre') || '';
+        document.getElementById('edad').value = localStorage.getItem('edad') || '';
+        document.getElementById('carrera').value = localStorage.getItem('carrera') || '';
+        document.getElementById('semestre').value = localStorage.getItem('semestre') || '';
+
+        alert("Datos restaurados")
+    }
+
+    //Función para "enviar los datos"
+    function enviarDatos(){
+        document.getElementById('nombre').value = '';
+        document.getElementById('edad').value = '';
+        document.getElementById('carrera').value = '';
+        document.getElementById('semestre').value = '';
+        alert("Sus datos han sido enviados")
+    }
+
+    // Llama a la función cargarDatos cuando la página se carga
+    window.onload = cargarDatos;
+
+    // Llama a la función guardarDatos cada 5 segundos
+    setInterval(guardarDatos, 5000);
+</script>
+</head>
+<body>
+    <h1>Formulario de Demostración</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad"><br><br>
+        
+        <label for="carrera">Carrera:</label>
+        <input type="text" id="carrera" name="carrera"><br><br>
+        
+        <label for="semestre">Semestre:</label>
+        <input type="number" id="semestre" name="semestre"><br><br>
+        
+        <input type="button" value="Enviar" onclick="guardarDatos(), enviarDatos()">
+    </form>
+</body>
+</html>
