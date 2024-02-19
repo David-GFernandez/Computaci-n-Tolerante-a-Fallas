@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>638</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Agregar</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_ingresarProcesos">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>9</y>
+          <width>291</width>
+          <height>82</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Ingresar Procesos</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Numero de Procesos</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinBox_numeroProcesos"/>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_agregarProcesos">
+           <property name="text">
+            <string>Agregar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_listaProcesos">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>100</y>
+          <width>591</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Lista de Procesos</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="plainTextEdit_listaProcesos"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>9</y>
+          <width>291</width>
+          <height>82</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Ingresar Quantum</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Segundos</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinBox_Quantum"/>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_establecerQuantum">
+           <property name="text">
+            <string>Establecer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Procesos</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>331</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Estatus</string>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>23</y>
+           <width>66</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tiempo Global</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>52</y>
+           <width>82</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Procesos Nuevos</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_iniciar">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>52</y>
+           <width>91</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 13pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Iniciar</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber">
+         <property name="geometry">
+          <rect>
+           <x>98</x>
+           <y>15</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_procesosNuevos">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>52</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Quantum (segundos)</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_valorQuantum">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>80</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>170</y>
+          <width>251</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Proceso en ejecución</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget_procesoEjecucion">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="rowCount">
+            <number>6</number>
+           </property>
+           <property name="columnCount">
+            <number>1</number>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Programa</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Operación</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Tiempo Estimado</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Tiempo Transcurrido</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Tiempo Restante</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Quantum</string>
+            </property>
+           </row>
+           <column/>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>331</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Procesos Listos</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget_procesosListos">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="rowCount">
+            <number>0</number>
+           </property>
+           <property name="columnCount">
+            <number>3</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>Programa</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Tiempo Estimado</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Tiempo Restante</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>393</y>
+          <width>601</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Procesos terminados</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget_procesosTerminados">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="columnCount">
+            <number>5</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>Programa</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Primer Dato</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Operación</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Segundo Dato</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Resultado</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>10</y>
+          <width>251</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Procesos Bloqueados</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget_procesosBloqueados">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="rowCount">
+            <number>0</number>
+           </property>
+           <property name="columnCount">
+            <number>2</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>Programa</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>T. Bloqueado</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>BCP</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QTableWidget" name="tableWidget_bcp">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="columnCount">
+           <number>0</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>Programa</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Estado</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Primer Dato</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Operación</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Segundo Dato</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Resultado</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Llegada</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Finalización</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Retorno</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Espera</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Servicio</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Restante</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Respuesta</string>
+           </property>
+          </row>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Resultados</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="tableWidget_resultados">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>false</bool>
+          </property>
+          <property name="columnCount">
+           <number>0</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>Programa</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Primer Dato</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Operación</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Segundo Dato</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Resultado</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Máximo</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Llegada</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Finalización</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Retorno</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Respuesta</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Espera</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>T. Servicio</string>
+           </property>
+          </row>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>638</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>spinBox_numeroProcesos</tabstop>
+  <tabstop>spinBox_Quantum</tabstop>
+  <tabstop>pushButton_agregarProcesos</tabstop>
+  <tabstop>pushButton_establecerQuantum</tabstop>
+  <tabstop>plainTextEdit_listaProcesos</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_procesosNuevos</tabstop>
+  <tabstop>pushButton_iniciar</tabstop>
+  <tabstop>lineEdit_valorQuantum</tabstop>
+  <tabstop>tableWidget_procesosBloqueados</tabstop>
+  <tabstop>tableWidget_bcp</tabstop>
+  <tabstop>tableWidget_procesosTerminados</tabstop>
+  <tabstop>tableWidget_procesoEjecucion</tabstop>
+  <tabstop>tableWidget_procesosListos</tabstop>
+  <tabstop>tableWidget_resultados</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
